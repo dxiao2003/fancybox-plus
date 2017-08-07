@@ -801,6 +801,9 @@
             .bind('click.fb', function (e) {
                 e.preventDefault();
 
+                if (options.stopPropagation)
+                    e.stopPropagation();
+
                 if (busy) {
                     return;
                 }
